@@ -72,7 +72,7 @@ def getproxy(devadd,token1):
     pro=requests.post(url='https://api.weaved.com/v22/api/device/connect',headers=head,data=json.dumps(param))
     p=pro.json()
     print p
-    if(p['status']=='ok'):
+    if(p['connection']['status']=='ok'):
         print "was going to be an error of the proxy index but saved it..!"
         y=time.objects.all()[1]
         print y.proxyadd
