@@ -91,8 +91,9 @@ def communicate(paddr,statusi):
     par={
     "status":statusi,
     }
+    print "the status caught in the communicate functon is",statusi
     head={'Content-Type': 'application/json'}
-    req=requests.post(url=paddr,headers=head,data=par)
+    req=requests.post(url=paddr,data=par)
     print req.text
 
 
