@@ -53,6 +53,7 @@ def connectweave():
     'accept-encoding': 'gzip, deflate',}
     login=requests.get(url=url,headers=headers)
     p=login.json()
+    print "the token is",p['token']
     return p['token']
 
 def getproxy(devadd,token1):
